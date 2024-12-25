@@ -1,4 +1,4 @@
-import React from "react";
+import {} from "react";
 import { useParams } from "react-router-dom";
 import { GoEye } from "react-icons/go";
 import { CiStar, CiLocationOn } from "react-icons/ci";

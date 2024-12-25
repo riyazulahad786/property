@@ -10,11 +10,13 @@ import image7 from "../assets/image7.jpg";
 import image8 from "../assets/image8.webp";
 import image9 from "../assets/image9.jpg";
 import { CiHeart } from "react-icons/ci";
-import { GoEye } from "react-icons/go";
+import { GoEye, GoSearch } from "react-icons/go";
 import { CiStar } from "react-icons/ci";
 import Carousel from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaUser } from "react-icons/fa";
+import {  CiLocationOn } from "react-icons/ci";
 
 function Cards() {
   const navigate = useNavigate();
@@ -265,6 +267,35 @@ function Cards() {
           </button>
         )}
         {allLoaded && <p>All cards have been loaded.</p>}
+      </div>
+      <div
+        className="fixed-bottom d-flex justify-content-around align-items-center shadow-lg rounded bg-light py-2 border-top"
+        style={{ zIndex: 1000 }}
+      >
+        <button
+          className="btn explore "
+          onClick={() => navigate("/")}
+        >
+          <GoSearch size={20} /> Search
+        </button>
+        <button
+          className="btn "
+          onClick={() => navigate("/")}
+        >
+          <GoSearch size={20} /> wishlist
+        </button>
+        <button
+          className="btn "
+          onClick={() => alert("Liked Items")}
+        >
+          <CiLocationOn size={20} />  map
+        </button>
+        <button
+          className="btn "
+          onClick={() => alert("Liked Items")}
+        >
+          <FaUser size={20} />Login
+        </button>
       </div>
     </div>
   );
